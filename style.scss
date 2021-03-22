@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+$backgroundColor: #22b573ff;
+$cardColorOne: #1c1717ff;
+$cardColorTwo: #f2f2f2ff;
+$yellowText: #e6a947ff;
+$whiteText: #a3a09dff;
+$titleText: #cbe7daff;
+$cardTextTwo: #5a6363ff;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $backgroundColor;
+  color: $titleText;
+
+  p {
+    font-size: 1.1rem;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    max-width: 80%;
+    gap: 6rem;
+    margin: 2rem;
+    height: 100%;
+    margin-left: 10rem;
+    .cards {
+      display: flex;
+      position: relative;
+      padding: 3rem;
+      max-width: 80%;
+      gap: 5rem;
+      justify-content: center;
+      justify-items: center;
+      font-size: 1rem;
+      line-height: 1.2rem;
+
+      a {
+        color: $yellowText;
+        margin-top: 10px;
+        position: absolute;
+      }
+
+      .card1 {
+        a {
+          top: 5rem;
+        }
+      }
+      .card1,
+      .card3 {
+        background-color: $cardColorOne;
+        padding: 50px;
+
+        a {
+          color: $yellowText;
+          margin-top: 10px;
+          position: relative;
+          font-weight: bolder;
+          text-decoration: none;
+          right: 3rem;
+        }
+
+        h1 {
+          color: $yellowText;
+          left: 0;
+        }
+      }
+      .card3 {
+        background-color: $cardColorOne;
+        padding: 100px;
+
+        a {
+          position: relative;
+          top: 14.7rem;
+          right: 6rem;
+        }
+
+        .play {
+          font-size: 8rem;
+          justify-content: center;
+          justify-self: center;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+        }
+        .lecture {
+          display: left;
+          position: relative;
+          right: 3rem;
+          top: 15rem;
+          color: $yellowText;
+        }
+
+        h1 {
+          color: $yellowText;
+        }
+      }
+
+      .card2 {
+        background-color: $cardColorTwo;
+        padding: 50px;
+        h1 {
+          color: $yellowText;
+        }
+        p {
+          color: $cardTextTwo;
+        }
+        a {
+          position: relative;
+          top: 7.5rem;
+          text-decoration: none;
+          font-weight: bolder;
+          right: 3rem;
+        }
+      }
+    }
+  }
+}
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  border: none;
+  color: white;
+  background-color: black;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 812px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
